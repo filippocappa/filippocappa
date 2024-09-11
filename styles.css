@@ -1,4 +1,4 @@
-@font-face {
+font-face {
     font-family: 'PPGatwick-GliderSemibold';
     src: url('PPGatwick-GliderSemibold.otf') format('opentype');
 }
@@ -18,9 +18,11 @@ body {
     color: white;
     z-index: 1;
     transition: color 0.4s ease-in-out;
-    text-shadow: 0 0 3px rgba(255, 255, 255, 0.6), /* White glow */
-                 0 0 6px rgba(255, 255, 255, 0.4), 
-                 0 0 9px rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 7px rgba(255, 255, 255, 0.7), /* White glow */
+                 0 0 10px rgba(255, 255, 255, 0.6), 
+                 0 0 15px rgba(255, 255, 255, 0.4),
+                 0 0 18px rgba(255, 255, 255, 0.2),
+                 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 /* Stili per il pulsante di toggle */
@@ -47,9 +49,12 @@ body.light {
 }
 body.light .content {
     color: #000000;
-    text-shadow: 0 0 3px rgba(0, 0, 0, 0.6), /* Black glow */
-                 0 0 6px rgba(0, 0, 0, 0.4), 
-                 0 0 9px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 0 7px rgba(0, 0, 0, 0.6), /* Black glow */
+                 0 0 10px rgba(0, 0, 0, 0.6), 
+                 0 0 15px rgba(0, 0, 0, 0.4),
+                 0 0 18px rgba(0, 0, 0, 0.2),
+                 0 0 20px rgba(0, 0, 0, 0.05),
+                 0 0 40px rgba(0, 0, 0, 0.01);
 }
 
 /* Trasformazione nel tema light */
@@ -57,4 +62,12 @@ body.light .theme-toggle img {
     /* Nessuna trasformazione nel tema light */
     transform: none;
     filter: none;
+}
+
+/* Media query per dispositivi mobili */
+@media (max-width: 600px) {
+    .content {
+        transform: rotate(90deg);
+        transform-origin: center center;
+    }
 }
