@@ -3,20 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina con Ciao</title>
+    <title>k</title>
     <style>
         body {
+            margin: 0;
+            height: 100vh;
+            background-color: #1a1a1a;
+            cursor: none;
+            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
             font-family: Arial, sans-serif;
-            font-size: 24px;
+        }
+        .content {
+            font-size: 48px;
+            color: white;
+            z-index: 1;
+        }
+        .light {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%);
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 0;
         }
     </style>
 </head>
 <body>
-    <div>ciao</div>
+    <div class="content">ciao</div>
+    <div class="light"></div>
+
+    <script>
+        const light = document.querySelector('.light');
+        let currentX = 0, currentY = 0;
+        let targetX = 0, targetY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            targetX = e.clientX;
+            targetY = e.clientY;
+        });
+
+        function animate() {
+            currentX += (targetX - currentX) * 0.3;
+            currentY += (targetY - currentY) * 0.3;
+
+            light.style.left = currentX + 'px';
+            light.style.top = currentY + 'px';
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
 </body>
 </html>
