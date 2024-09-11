@@ -14,7 +14,7 @@ body {
 }
 
 .content {
-    font-size: 48px;
+    font-size: 96px;
     color: white;
     z-index: 1;
     transition: color 0.4s ease-in-out;
@@ -35,8 +35,8 @@ body {
 }
 
 .theme-toggle img {
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
     filter: invert(100%);
 }
