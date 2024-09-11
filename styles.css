@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'PPGatwick-GliderSemibold';
+    src: url('PPGatwick-GliderSemibold.otf') format('opentype');
+}
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: PPGatwick-GliderSemibold;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+.content {
+    font-size: 48px;
+    color: white;
+    z-index: 1;
+    transition: color 0.4s ease-in-out;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.6), /* White glow */
+                 0 0 6px rgba(255, 255, 255, 0.4), 
+                 0 0 9px rgba(255, 255, 255, 0.2);
+}
+
+/* Stili per il pulsante di toggle */
+.theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.theme-toggle img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+    filter: invert(100%);
+}
+
+/* Tema light */
+body.light {
+    background-color: #ffffff;
+}
+body.light .content {
+    color: #000000;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.6), /* Black glow */
+                 0 0 6px rgba(0, 0, 0, 0.4), 
+                 0 0 9px rgba(0, 0, 0, 0.2);
+}
+
+/* Trasformazione nel tema light */
+body.light .theme-toggle img {
+    /* Nessuna trasformazione nel tema light */
+    transform: none;
+    filter: none;
+}
