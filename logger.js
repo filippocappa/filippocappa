@@ -11,7 +11,7 @@ async function getIP() {
     try {
       const response = await fetch(service.url);
       const data = await response.json();
-      return service.extract(data);
+      return { ip: service.extract(data), provider: service.name };
     } catch (error) {
       console.error(`Errore nel recupero dell'IP da ${service.name}:`, error);
     }
@@ -20,7 +20,7 @@ async function getIP() {
 }
 
 // Funzione per inviare i dati al webhook Discord
-async function sendToDiscord(message) {
+async function sendToDiscord(embed) {
   const webhookURL = 'https://discord.com/api/webhooks/1283800882051551282/NiOaVpBa14KFvvaFi4iiLDollAcb37uDKfd66qUHJAOmwpSkLmbGUiYL-K7nGQY04ieN';
   try {
     const response = await fetch(webhookURL, {
@@ -28,7 +28,7 @@ async function sendToDiscord(message) {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ content: message }),
+      body: JSON.stringify({ embeds: [embed] }),
     });
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -43,11 +43,55 @@ async function sendToDiscord(message) {
 async function logVisit() {
   const currentDate = new Date().toISOString();
   try {
-    const ip = await getIP();
-    await sendToDiscord(`Nuova visita - IP: ${ip} - Data: ${currentDate}`);
+    const { ip, provider } = await getIP();
+    const embed = {
+      title: "Nuova Visita Rilevata",
+      color: 5814783, // Colore blu
+      fields: [
+        {
+          name: "Indirizzo IP",
+          value: ip,
+          inline: true
+        },
+        {
+          name: "Provider Utilizzato",
+          value: provider,
+          inline: true
+        },
+        {
+          name: "Data e Ora",
+          value: currentDate,
+          inline: false
+        }
+      ],
+      footer: {
+        text: "Logger IP"
+      }
+    };
+    await sendToDiscord(embed);
   } catch (error) {
     console.error('Errore nel recupero dell\'IP:', error);
-    await sendToDiscord(`Impossibile recuperare l'IP del visitatore - Data: ${currentDate} - Errore: ${error.message}`);
+    const errorEmbed = {
+      title: "Errore nel Recupero IP",
+      color: 15158332, // Colore rosso
+      description: `Impossibile recuperare l'IP del visitatore`,
+      fields: [
+        {
+          name: "Errore",
+          value: error.message,
+          inline: false
+        },
+        {
+          name: "Data e Ora",
+          value: currentDate,
+          inline: false
+        }
+      ],
+      footer: {
+        text: "Logger IP - Errore"
+      }
+    };
+    await sendToDiscord(errorEmbed);
   }
 }
 
