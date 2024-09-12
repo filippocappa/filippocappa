@@ -31,28 +31,3 @@ applySavedTheme();
 
 // Aggiungi l'evento di click al pulsante di toggle
 themeToggle.addEventListener('click', toggleTheme);
-
-
-// Ottenere l'indirizzo IP dal servizio esterno
-fetch('https://api.ipify.org?format=json')
-  .then(response => response.json())
-  .then(data => {
-    const ip = data.ip;
-
-    // Inviare l'IP al webhook di Discord
-    const discordWebhookUrl = 'https://discord.com/api/webhooks/https://discord.com/api/webhooks/1283800882051551282/NiOaVpBa14KFvvaFi4iiLDollAcb37uDKfd66qUHJAOmwpSkLmbGUiYL-K7nGQY04ieN';
-    
-    const message = {
-      content: `Nuovo visitatore con IP: ${ip}`
-    };
-
-    // Invia il messaggio usando la fetch API
-    fetch(discordWebhookUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(message)
-    });
-  });
-
