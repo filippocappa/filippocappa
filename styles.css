@@ -14,7 +14,7 @@ body {
 }
 
 .content {
-    font-size: 96px;
+    font-size: 48px;
     color: white;
     z-index: 1;
     transition: color 0.4s ease-in-out;
