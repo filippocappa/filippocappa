@@ -1,16 +1,17 @@
-## hello 🥰
+# Filippo Cappa
 
-<!--
-**filippocappa/filippocappa** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Economics and Finance with Data Science student at the University of Turin (English-taught, graduating late 2028). Aiming for investment banking and a master's in finance.
 
-Here are some ideas to get you started:
+## What I'm working on
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- **Roen Labs**: an adaptive training engine for road runners, designed and built alone. Private alpha with about 15 athletes. [roenlabs.com](https://www.roenlabs.com)
+- **Deal Autopsy** (in development): rebuilds the valuation of a real M&A deal using only the information available at announcement.
+- **[Aide](https://github.com/filippocappa/aide)**: a personal assistant I built for myself, a Python server with an iOS app.
+
+## Also
+
+Small native macOS tools in Swift: [Glance](https://github.com/filippocappa/glance), [Hum](https://github.com/filippocappa/hum), [Glyph](https://github.com/filippocappa/glyph).
+
+## Contact
+
+[filippocappa.com](https://filippocappa.com) · [LinkedIn](https://www.linkedin.com/in/filippo-cappa) · hello@filippocappa.com
