@@ -19,7 +19,7 @@ Native macOS utilities in Swift:
 
 - **[Glance](https://github.com/filippocappa/glance)**: picture-in-picture for any window
 - **[Hum](https://github.com/filippocappa/hum)**: menu-bar noise generator (white, pink, brown)
-- **[Glyph](https://github.com/filippocappa/glyph)**
+- **[Glyph](https://github.com/filippocappa/glyph)**: text extraction tool from screen
 
 ## Get in touch
 
