@@ -1,17 +1,26 @@
-# Filippo Cappa
+# Hi, I'm Filippo
 
-Economics and Finance with Data Science student at the University of Turin (English-taught, graduating late 2028). Aiming for investment banking and a master's in finance.
+I study Economics and Finance with Data Science at the University of Turin (English-taught, graduating late 2028). I'm headed for investment banking and a master's in finance, and I build software on the side, mostly where finance, data and product overlap.
 
-## What I'm working on
+## Building now
 
-- **Roen Labs**: an adaptive training engine for road runners, designed and built alone. Private alpha with about 15 athletes. [roenlabs.com](https://www.roenlabs.com)
-- **Deal Autopsy** (in development): rebuilds the valuation of a real M&A deal using only the information available at announcement.
-- **[Aide](https://github.com/filippocappa/aide)**: a personal assistant I built for myself, a Python server with an iOS app.
+**[Roen Labs](https://www.roenlabs.com)** · adaptive training for road runners  
+A training engine that models each athlete's load (Banister model, calibrated on their Strava data), solves for a race plan and prescribes the day's session. Designed and built solo; in private alpha with about 15 athletes.
 
-## Also
+**Deal Autopsy** · *in development*  
+Rebuilds the valuation of a real M&A deal using only the information that was public on announcement day.
 
-Small native macOS tools in Swift: [Glance](https://github.com/filippocappa/glance), [Hum](https://github.com/filippocappa/hum), [Glyph](https://github.com/filippocappa/glyph).
+**[Aide](https://github.com/filippocappa/aide)** · a personal assistant I use every day  
+A Python server backed by Claude with an iOS app on top: calendar, reminders, mail, health, habits and study notes in one place.
 
-## Contact
+## Small tools
 
-[filippocappa.com](https://filippocappa.com) · [LinkedIn](https://www.linkedin.com/in/filippo-cappa) · hello@filippocappa.com
+Native macOS utilities in Swift:
+
+- **[Glance](https://github.com/filippocappa/glance)**: picture-in-picture for any window
+- **[Hum](https://github.com/filippocappa/hum)**: menu-bar noise generator (white, pink, brown)
+- **[Glyph](https://github.com/filippocappa/glyph)**
+
+## Get in touch
+
+[filippocappa.com](https://filippocappa.com) · [LinkedIn](https://www.linkedin.com/in/filippo-cappa) · [hello@filippocappa.com](mailto:hello@filippocappa.com)
