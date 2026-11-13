@@ -10,6 +10,9 @@ A training engine that models each athlete's load (Banister model, calibrated on
 **Deal Autopsy** · *in development*  
 Rebuilds the valuation of a real M&A deal using only the information that was public on announcement day.
 
+**[Verbatim](https://github.com/filippocappa/verbatim)** · dictation for the Mac  
+Double-tap a key, talk, and clean text is pasted where you're typing, in English or Italian. It also takes meeting notes without a bot joining the call: transcript, who said what, and a recap. Native Swift; speech runs on Groq or fully on the Mac.
+
 **[Aide](https://github.com/filippocappa/aide)** · a personal assistant I use every day  
 A Python server backed by Claude with an iOS app on top: calendar, reminders, mail, health, habits and study notes in one place.
 
